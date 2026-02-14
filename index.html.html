@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 24.8.1.2 (Linux)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="00:00:00"/>
+	<style type="text/css">
+		@page { size: 8.27in 11.69in; margin: 0.79in }
+		p { line-height: 115%; margin-bottom: 0.1in; background: transparent }
+		pre { background: transparent }
+		pre.western { font-family: "Liberation Mono", monospace; font-size: 10pt }
+		pre.cjk { font-family: "NSimSun", monospace; font-size: 10pt }
+		pre.ctl { font-family: "Liberation Mono", monospace; font-size: 10pt }
+	</style>
+</head>
+<body lang="en-US" link="#000080" vlink="#800000" dir="ltr"><pre class="western">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;title&gt;Will You Be My Valentine?&lt;/title&gt;
+&lt;style&gt;
+body {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+margin: 0;
+background-color: #ffeef2;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+text-align: center;
+overflow: hidden;
+}
+
+#container {
+background: white;
+padding: 3rem;
+border-radius: 20px;
+box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+h1 {
+color: #d63384;
+font-size: 2.5rem;
+margin-bottom: 2rem;
+}
+
+.buttons {
+display: flex;
+justify-content: center;
+gap: 20px;
+position: relative;
+}
+
+button {
+padding: 15px 35px;
+font-size: 1.2rem;
+border: none;
+border-radius: 50px;
+cursor: pointer;
+transition: transform 0.2s;
+}
+
+#yesButton {
+background-color: #ff4d6d;
+color: white;
+}
+
+#yesButton:hover {
+transform: scale(1.1);
+background-color: #ff758f;
+}
+
+#noButton {
+background-color: #6c757d;
+color: white;
+position: absolute; /* Needed for jumping */
+left: 160px; /* Initial position */
+}
+
+.success-message {
+display: none;
+color: #d63384;
+}
+
+img {
+width: 200px;
+margin-bottom: 20px;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div id=&quot;container&quot;&gt;
+&lt;div id=&quot;quiz&quot;&gt;
+&lt;img src=&quot;https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHJreGZueXF4ZzR3bm8wdm8xeXByeWp4eG8xeXByeWp4eG8xeXByeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/c7C0vNoq00T06R09s0/giphy.gif&quot; alt=&quot;Cute Bear&quot;&gt;
+&lt;h1&gt;Will you be my Valentine? ❤️&lt;/h1&gt;
+&lt;div class=&quot;buttons&quot;&gt;
+&lt;button id=&quot;yesButton&quot; onclick=&quot;celebrate()&quot;&gt;Yes&lt;/button&gt;
+&lt;button id=&quot;noButton&quot; onmouseover=&quot;moveButton()&quot;&gt;No&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;celebration&quot; class=&quot;success-message&quot;&gt;
+&lt;img src=&quot;https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXNreXByeWp4eG8xeXByeWp4eG8xeXByeWp4eG8xeXByeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/L4lvBpHFm3X3N6oN9n/giphy.gif&quot; alt=&quot;Happy Dance&quot;&gt;
+&lt;h1&gt;Yay! I knew it! 🥰&lt;/h1&gt;
+&lt;p&gt;I love you!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+function moveButton() {
+const noBtn = document.getElementById('noButton');
+
+// Calculate random positions within the screen
+// We subtract button width/height to keep it on screen
+const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+
+noBtn.style.position = 'fixed';
+noBtn.style.left = x + 'px';
+noBtn.style.top = y + 'px';
+}
+
+function celebrate() {
+document.getElementById('quiz').style.display = 'none';
+document.getElementById('celebration').style.display = 'block';
+}
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</body>
+</html>
